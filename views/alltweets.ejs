@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All tweets</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>X</h1>
+    <% for (let post of posts) { %>
+    <hr />
+    <div class="tweet">
+      <h3 class="username">@<%= post.username %></h3>
+      <p class="content"><%= post.content %></p>
+    </div>
+    <% } %>
+    <hr />
+    <form method="get" action="/tweets/new">
+      <button>Add tweets</button>
+    </form>
+  </body>
+</html>
